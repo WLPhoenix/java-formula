@@ -2,30 +2,43 @@ title: OpenJDK and Oracle Java
 description: Formula to install OpenJDK and Oracle Java (versions 6 and 7)
 root_path: java
 components:
-  - title: Oracle Java 6 JDK 
+  - title: Oracle Java 6 JDK
     description: Oracle Java 6 JDK
     sls_path: java.oracle.jdk6
   - title: Oracle Java 6 JRE
     description: Oracle Java 6 JRE
     sls_path: java.oracle.jre6
-  - title: Oracle Java 7 JDK 
+  - title: Oracle Java 7 JDK
     description: Oracle Java 7 JDK
     sls_path: java.oracle.jdk7
   - title: Oracle Java 7 JRE
     description: Oracle Java 7 JRE
     sls_path: java.oracle.jre7
-  - title: OpenJDK Java 6 JDK 
+  - title: Oracle Java 8 JDK
+    description: Oracle Java 8 JDK
+    sls_path: java.oracle.jdk8
+  - title: Oracle Java 8 JRE
+    description: Oracle Java 8 JRE
+    sls_path: java.oracle.jre8
+  - title: OpenJDK Java 6 JDK
     description: OpenJDK Java 6 JDK
     sls_path: java.openjdk.jdk6
   - title: OpenJDK Java 6 JRE
     description: OpenJDK Java 6 JRE
     sls_path: java.openjdk.jre6
-  - title: OpenJDK Java 7 JDK 
+  - title: OpenJDK Java 7 JDK
     description: OpenJDK Java 7 JDK
     sls_path: java.openjdk.jdk7
   - title: OpenJDK Java 7 JRE
     description: OpenJDK Java 7 JRE
     sls_path: java.openjdk.jre7
+  - title: OpenJDK Java 8 JDK
+    description: OpenJDK Java 8 JDK
+    sls_path: java.openjdk.jdk8
+  - title: OpenJDK Java 8 JRE
+    description: OpenJDK Java 8 JRE
+    sls_path: java.openjdk.jre8
+
 pillar_defaults:
   java:
     enable_jce: false
@@ -48,3 +61,11 @@ pillar_defaults:
         rpm: 'jre-1.7.0_45'
       jce7:
         uri: 'http://download.oracle.com/otn-pub/java/jce/7/UnlimitedJCEPolicyJDK7.zip'
+      jdk8:
+        uri: 'http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.rpm'
+        rpm: 'jdk-1.8.0_25'
+      jre8:
+        uri: 'http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jre-8u25-linux-x64.rpm'
+        rpm: 'jre-1.8.0_25'
+      jce8:
+        uri: 'http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip'
